@@ -2,61 +2,72 @@ window.addEventListener('load', function() {
   var selectHeadquarters = document.getElementById('headquarters');
   var selectGeneration = document.getElementById('generation');
 
-  // Cómo puedo agregar el resto de generaciones sin repetir la creacion del option?
+  // Cargando data al selector de Sedes
+  var headquarters = Object.keys(data);
+  for (var i = 0; i < headquarters.length ; i++) {
+    var option = document.createElement('option');
+    if (headquarters[i] === 'AQP') {
+      option.textContent = 'Arequipa';
+      option.setAttribute('value', 'arequipa');
+    }
+    if (headquarters[i] === 'CDMX') {
+      option.textContent = 'México';
+      option.setAttribute('value', 'mexico');
+    }
+    if (headquarters[i] === 'LIM') {
+      option.textContent = 'Lima';
+      option.setAttribute('value', 'lima');
+    }
+    if (headquarters[i] === 'SCL') {
+      option.textContent = 'Chile';
+      option.setAttribute('value', 'chile');
+    }
+    selectHeadquarters.appendChild(option);
+  }
+  // Evento para cargar selector de Generaciones
   selectHeadquarters.addEventListener('change', function() {
     if (selectHeadquarters.value == 'arequipa') {
-      var option = document.createElement('option');
-      option.textContent = '2016 - II';
-      selectGeneration.appendChild(option);
-      var option = document.createElement('option');
-      option.textContent = '2017 - I';
-      selectGeneration.appendChild(option);
-      // Retorna la posición inicial del select
-      selectGeneration.value = 'select';
-      // selectGeneration.value = 'initial'; // Reinicia el select pero con inicio blanco
-    } else if (selectHeadquarters.value == 'chile') {
-      var option = document.createElement('option');
-      option.textContent = '2016 - II';
-      selectGeneration.appendChild(option);
-      var option = document.createElement('option');
-      option.textContent = '2017 - I';
-      selectGeneration.appendChild(option);
-      var option = document.createElement('option');
-      option.textContent = '2017 - II';
-      selectGeneration.appendChild(option);
-      // Retorna la posición inicial del select
-      selectGeneration.value = 'select';
-    } else if (selectHeadquarters.value == 'lima') {
-      var option = document.createElement('option');
-      option.textContent = '2016 - II';
-      selectGeneration.appendChild(option);
-      var option = document.createElement('option');
-      option.textContent = '2017 - I';
-      selectGeneration.appendChild(option);
-      var option = document.createElement('option');
-      option.textContent = '2017 - II';
-      selectGeneration.appendChild(option);
-      // Retorna la posición inicial del select
-      selectGeneration.value = 'select';
+      var objHeadquarters = data['AQP'];
+      var arrGeneration = Object.keys(objHeadquarters);
+      for (var i = 0; i < arrGeneration.length; i++) {
+        var option = document.createElement('option');
+        var textOption = arrGeneration[i];
+        option.textContent = textOption;
+        selectGeneration.appendChild(option);
+      }
+      console.log(arrGeneration);
     } else if (selectHeadquarters.value == 'mexico') {
-      var option = document.createElement('option');
-      option.textContent = '2015 - I';
-      selectGeneration.appendChild(option);
-      var option = document.createElement('option');
-      option.textContent = '2016 - I';
-      selectGeneration.appendChild(option);
-      var option = document.createElement('option');
-      option.textContent = '2017 - I';
-      selectGeneration.appendChild(option);
-      var option = document.createElement('option');
-      option.textContent = '2017 - II';
-      selectGeneration.appendChild(option);
-      // Retorna la posición inicial del select
-      selectGeneration.value = 'select';
+      var objHeadquarters = data['CDMX'];
+      var arrGeneration = Object.keys(objHeadquarters);
+      for (var i = 0; i < arrGeneration.length; i++) {
+        var option = document.createElement('option');
+        var textOption = arrGeneration[i];
+        option.textContent = textOption;
+        selectGeneration.appendChild(option);
+      }
+      console.log(arrGeneration);
+    } else if (selectHeadquarters.value == 'lima') {
+      var objHeadquarters = data['LIM'];
+      var arrGeneration = Object.keys(objHeadquarters);
+      for (var i = 0; i < arrGeneration.length; i++) {
+        var option = document.createElement('option');
+        var textOption = arrGeneration[i];
+        option.textContent = textOption;
+        selectGeneration.appendChild(option);
+      }
+      console.log(arrGeneration);
+    } else if (selectHeadquarters.value == 'chile') {
+      var objHeadquarters = data['SCL'];
+      var arrGeneration = Object.keys(objHeadquarters);
+      for (var i = 0; i < arrGeneration.length; i++) {
+        var option = document.createElement('option');
+        var textOption = arrGeneration[i];
+        option.textContent = textOption;
+        selectGeneration.appendChild(option);
+      }
+      console.log(arrGeneration);
     }
   });
 });
-
-
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(data);
