@@ -1,3 +1,54 @@
-/*
- * Estilos de tu proyecto
- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F7F7F7;
+}
+
+nav {
+  background-color: #FFF;
+  width: 100%;
+  overflow: auto;
+  padding: 10px 100px;
+}
+
+.logo {
+  width: 150px;
+  margin: auto;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.login {
+  display: inline-block;
+  float: right;
+}
+
+header {
+  background-color: #E1E1E1;
+  padding: 5px 100px;
+}
+
+.headquarters {
+  padding: 5px;
+  font-size: 18px;
+}
+
+.generation {
+  padding: 5px;
+  font-size: 18px;
+}
+
+.tab {
+  padding: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-style: none;
+  background-color: transparent;
+  margin-top: 10px;
+}

@@ -3,12 +3,75 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <!-- Íconos -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Archivo css -->
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <nav>
+      <div class="logo">
+          <img src="assets/images/logo-laboratoria.svg" alt="Logo Laboratoria">
+      </div>
+      <div class="login">
+        <!-- <span class="fa fa-user-circle" aria-hidden="true"></span> -->
+      </div>
+    </nav>
+    <header>
+      <!-- Sedes -->
+      <select id="headquarters" class="headquarters" name="">
+        <option value="">Sede</option>
+        <option value="arequipa">Arequipa</option>
+        <option value="chile">Chile</option>
+        <option value="lima">Lima</option>
+        <option value="mexico">México</option>
+      </select>
+      <!-- Generaciones -->
+      <select id="generation" class="generation" name="">
+        <option value="select">Generación</option>
+      </select>
+      <form class="" action="index.html" method="post">
+        <input class="tab" type="submit" name="" value="general">
+        <input class="tab" type="submit" name="" value="estudiantes">
+        <input class="tab" type="submit" name="" value="profesores">
+      </form>
+    </header>
+    <section>
+      <!-- Matriculadas -->
+      <div class="">
+        <!-- estudiantes actualmente matriculados -->
+        <!-- % desertoras -->
+      </div>
+      <!-- Logro -->
+      <div class="">
+        <!-- estudiantes que cumplen con el objetivo -->
+        <!-- % y cantidad del total -->
+      </div>
+      <!-- Net Promoter Score -->
+      <div class="">
 
+      </div>
+    </section>
+    <section>
+      <!-- Tech skills -->
+    </section>
+    <section>
+      <!-- Life skills -->
+    </section>
+    <section>
+      <div class="">
+        <!-- Satisfacción de la estudiante -->
+      </div>
+      <div class="">
+        <!-- Calificación del profesor -->
+      </div>
+      <div class="">
+        <!-- Calificación del Jedi Master -->
+      </div>
+    </section>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
+		<!-- Aquí van tus archivos JS -->
     <script src="./js/app.js"></script>
   </body>
 </html>
